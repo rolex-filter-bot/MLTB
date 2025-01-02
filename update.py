@@ -60,7 +60,7 @@ except Exception:
 
 load_dotenv("config.env", override=True)
 
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
+BOT_TOKEN = environ.get("BOT_TOKEN", "7319401145:AAFgxIKthqcO_9UBtxAogpPWMDLrGvl_6Rc")
 if len(BOT_TOKEN) == 0:
     error("BOT_TOKEN variable is missing! Exiting now")
     sys.exit(1)
@@ -79,11 +79,11 @@ if DATABASE_URL:
         environ["UPSTREAM_BRANCH"] = config_dict["UPSTREAM_BRANCH"]
     conn.close()
 
-UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "")
+UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "https://github.com/rolex-filter-bot/MLTB")
 if len(UPSTREAM_REPO) == 0:
     UPSTREAM_REPO = "https://github.com/5hojib/Aeon"
 
-UPSTREAM_BRANCH = environ.get("UPSTREAM_BRANCH", "")
+UPSTREAM_BRANCH = environ.get("UPSTREAM_BRANCH", "main")
 if len(UPSTREAM_BRANCH) == 0:
     UPSTREAM_BRANCH = "main"
 
@@ -93,8 +93,8 @@ if path.exists(".git"):
 update = run(
     [
         f"git init -q \
-                 && git config --global user.email yesiamshojib@gmail.com \
-                 && git config --global user.name 5hojib \
+                 && git config --global user.email selvakanis1985@gmail.com \
+                 && git config --global user.name rolex-filter-bot \
                  && git add . \
                  && git commit -sm update -q \
                  && git remote add origin {UPSTREAM_REPO} \

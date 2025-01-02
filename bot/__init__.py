@@ -82,7 +82,7 @@ qb_listener_lock = Lock()
 status_reply_dict = {}
 download_dict = {}
 
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
+BOT_TOKEN = environ.get("BOT_TOKEN", "7319401145:AAFgxIKthqcO_9UBtxAogpPWMDLrGvl_6Rc")
 if len(BOT_TOKEN) == 0:
     error("BOT_TOKEN variable is missing! Exiting now")
     sys.exit(1)
@@ -136,21 +136,21 @@ GROUPS_EMAIL = environ.get("GROUPS_EMAIL", "")
 if len(GROUPS_EMAIL) != 0:
     GROUPS_EMAIL = GROUPS_EMAIL.lower()
 
-OWNER_ID = environ.get("OWNER_ID", "")
+OWNER_ID = environ.get("OWNER_ID", "6107997458")
 if len(OWNER_ID) == 0:
     error("OWNER_ID variable is missing! Exiting now")
     sys.exit(1)
 else:
     OWNER_ID = int(OWNER_ID)
 
-TELEGRAM_API = environ.get("TELEGRAM_API", "")
+TELEGRAM_API = environ.get("TELEGRAM_API", "28991562")
 if len(TELEGRAM_API) == 0:
     error("TELEGRAM_API variable is missing! Exiting now")
     sys.exit(1)
 else:
     TELEGRAM_API = int(TELEGRAM_API)
 
-TELEGRAM_HASH = environ.get("TELEGRAM_HASH", "")
+TELEGRAM_HASH = environ.get("TELEGRAM_HASH", "215d93eeacd3d1c704887f80b0b914f4")
 if len(TELEGRAM_HASH) == 0:
     error("TELEGRAM_HASH variable is missing! Exiting now")
     sys.exit(1)
@@ -186,9 +186,9 @@ if len(EXTENSION_FILTER) > 0:
         cleaned_x = x.lstrip(".")
         GLOBAL_EXTENSION_FILTER.append(cleaned_x.strip().lower())
 
-IS_PREMIUM_USER = False
-user = ""
-USER_SESSION_STRING = environ.get("USER_SESSION_STRING", "")
+IS_PREMIUM_USER = True
+user = "6107997458"
+USER_SESSION_STRING = environ.get("USER_SESSION_STRING", "BQG6YEoAt88w9kRmF-KqJnKpnrrCghSipsBLGZbVcAAnSz58PPt_YKRe4jAifMwqBzZJXCps1N417RI3sKOW83gDHaibGmJk2hPx8oFeNnG9qkknZW5zDPhXuRADiQL-CUAieNQWKCCqX3qJSeyydXqxR6wXaux9ueLF-7F5vyOBb1U9SMn5XFtb_f0xNrYhka97aIRs7qkFukPUAS4O-Kxmq3uMD_mcRECvWqBxPpowGWrdZ4TaAycI5QBRiJkrCyQ7FRpMH8VwZD1xO0pKgigCFujYshajAPskG2Y_2BwftWeVlxAu30qs1dJ7JO0pqbxD2qTG8hs-LB9LRvR3yvX4uLv2IAAAAAFsEKUSAA")
 if len(USER_SESSION_STRING) != 0:
     try:
         user = tgClient(
@@ -232,7 +232,7 @@ if len(STREAMWISH_API) == 0:
 BOT_MAX_TASKS = environ.get("BOT_MAX_TASKS", "")
 BOT_MAX_TASKS = int(BOT_MAX_TASKS) if BOT_MAX_TASKS.isdigit() else ""
 
-LEECH_LOG_ID = environ.get("LEECH_LOG_ID", "")
+LEECH_LOG_ID = environ.get("LEECH_LOG_ID", "-1001758430832")
 LEECH_LOG_ID = "" if len(LEECH_LOG_ID) == 0 else int(LEECH_LOG_ID)
 
 YT_DLP_OPTIONS = environ.get("YT_DLP_OPTIONS", "")
@@ -318,11 +318,11 @@ PLAYLIST_LIMIT = "" if len(PLAYLIST_LIMIT) == 0 else int(PLAYLIST_LIMIT)
 DELETE_LINKS = environ.get("DELETE_LINKS", "")
 DELETE_LINKS = DELETE_LINKS.lower() == "true"
 
-FSUB_IDS = environ.get("FSUB_IDS", "")
+FSUB_IDS = environ.get("FSUB_IDS", "-1001942379655")
 if len(FSUB_IDS) == 0:
     FSUB_IDS = ""
 
-MIRROR_LOG_ID = environ.get("MIRROR_LOG_ID", "")
+MIRROR_LOG_ID = environ.get("MIRROR_LOG_ID", "-1001758430832")
 if len(MIRROR_LOG_ID) == 0:
     MIRROR_LOG_ID = ""
 

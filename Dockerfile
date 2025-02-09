@@ -1,4 +1,4 @@
-FROM rolex-filter-bot/MLTB:latest
+FROM 5hojib/aeon:latest
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app

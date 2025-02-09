@@ -89,9 +89,9 @@ if len(BOT_TOKEN) == 0:
 
 bot_id = BOT_TOKEN.split(":", 1)[0]
 
-DATABASE_URL = environ.get("DATABASE_URL", "")
+DATABASE_URL = environ.get("DATABASE_URL", "mongodb+srv://rolexfilterbot:04612010@cluster100.lfunohx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster100")
 if len(DATABASE_URL) == 0:
-    DATABASE_URL = ""
+    DATABASE_URL = "mongodb+srv://rolexfilterbot:04612010@cluster100.lfunohx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster100"
 
 if DATABASE_URL:
     conn = MongoClient(DATABASE_URL)
@@ -128,7 +128,7 @@ if DATABASE_URL:
     conn.close()
     BOT_TOKEN = environ.get("BOT_TOKEN", "")
     bot_id = BOT_TOKEN.split(":", 1)[0]
-    DATABASE_URL = environ.get("DATABASE_URL", "")
+    DATABASE_URL = environ.get("DATABASE_URL", "mongodb+srv://rolexfilterbot:04612010@cluster100.lfunohx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster100")
 else:
     config_dict = {}
 
@@ -159,7 +159,7 @@ GDRIVE_ID = environ.get("GDRIVE_ID", "")
 if len(GDRIVE_ID) == 0:
     GDRIVE_ID = ""
 
-METADATA_KEY = environ.get("METADATA_KEY", "")
+METADATA_KEY = environ.get("METADATA_KEY", "Telegram ~ @TamillRockerznet")
 if len(METADATA_KEY) == 0:
     METADATA_KEY = ""
 
@@ -280,11 +280,11 @@ if len(BASE_URL) == 0:
     warning("BASE_URL not provided!")
     BASE_URL = ""
 
-UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "")
+UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "https://github.com/rolex-filter-bot/MLTB")
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = ""
+    UPSTREAM_REPO = "https://github.com/rolex-filter-bot/MLTB"
 
-UPSTREAM_BRANCH = environ.get("UPSTREAM_BRANCH", "")
+UPSTREAM_BRANCH = environ.get("UPSTREAM_BRANCH", "main")
 if len(UPSTREAM_BRANCH) == 0:
     UPSTREAM_BRANCH = "main"
 
@@ -318,7 +318,7 @@ PLAYLIST_LIMIT = "" if len(PLAYLIST_LIMIT) == 0 else int(PLAYLIST_LIMIT)
 DELETE_LINKS = environ.get("DELETE_LINKS", "")
 DELETE_LINKS = DELETE_LINKS.lower() == "true"
 
-FSUB_IDS = environ.get("FSUB_IDS", "-1001942379655")
+FSUB_IDS = environ.get("FSUB_IDS", "-1002432498240")
 if len(FSUB_IDS) == 0:
     FSUB_IDS = ""
 
@@ -446,7 +446,7 @@ srun(["cp", ".netrc", "/root/.netrc"], check=False)
 
 trackers = (
     check_output(
-        "curl -Ns https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt https://ngosang.github.io/trackerslist/trackers_all_http.txt https://newtrackon.com/api/all https://raw.githubusercontent.com/hezhijie0327/Trackerslist/main/trackerslist_tracker.txt | awk '$0' | tr '\n\n' ','",
+        "curl -Ns https://rawhubusercontent.com/XIU2/TrackersListCollection/master/all.txt https://ngosanghub.io/trackerslist/trackers_all_http.txt https://newtrackon.com/api/all https://rawhubusercontent.com/hezhijie0327/Trackerslist/main/trackerslist_tracker.txt | awk '$0' | tr '\n\n' ','",
         shell=True,
     )
     .decode("utf-8")

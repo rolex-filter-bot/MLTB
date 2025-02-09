@@ -67,7 +67,7 @@ if len(BOT_TOKEN) == 0:
 
 bot_id = BOT_TOKEN.split(":", 1)[0]
 
-DATABASE_URL = environ.get("DATABASE_URL", "")
+DATABASE_URL = environ.get("DATABASE_URL", "mongodb+srv://rolexfilterbot:04612010@cluster100.lfunohx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster100")
 if len(DATABASE_URL) == 0:
     DATABASE_URL = None
 

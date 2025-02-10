@@ -228,7 +228,7 @@ async def load_config():
     MEDIA_GROUP = MEDIA_GROUP.lower() == "true"
 
     await (await create_subprocess_exec("pkill", "-9", "-f", "gunicorn")).wait()
-    BASE_URL = environ.get("BASE_URL", "https://marginal-gracia-tamilrockerz-b37a5cf0.koyeb.app/").rstrip("/")
+    BASE_URL = environ.get("BASE_URL", "https://okay-kerrie-tamilrockerz-ac887a1f.koyeb.app/.rstrip("/")
     if len(BASE_URL) == 0:
         BASE_URL = ""
     else:
